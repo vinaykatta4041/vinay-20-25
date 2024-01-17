@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <title>Book</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <p>In order to develop HIS we need: the development of the Bitways layer (infrastructure),
+the development of the middleware of common services and the development of the
+            applications located in the<i>Applications</i> layer. As far as the <i>middleware of common
+            services</i> is concerned, a lot of work has been done both for standardization (e.g., CEN’s
+work on the architecture specification, OMG’s work on the common services interfaces
+specifications, HL7’s work on defining messages to be exchanged within the HIS), and
+            software development (e.g.,<i> DHE</i>, and <i>OpenEMed</i>).</p>
+        <p>What seems to be missing is the means to create applications for a HIS. That’s partially
+true since there are strong and very popular development tools for all kinds of applications: windows, Web or even smart-phone applications. Development environments/
+platforms like .net, Java, win32 as well as development suites targeting those environments like Microsoft’s Visual Studio, Borland’s Delphi, JBuilder, Eclipse, and so on, are
+only some of the means currently available for delivering useful, well-designed and
+functional applications. However, these are mainly Rapid Application Development
+(RAD) tools for generic purposes. There are no domain-specific development tools
+available today, which is to say that the idea of Application Frameworks for HC is not
+widespread. In order not to reinvent the wheel (in terms of the HIS applications
+development and HC in general),<b> the software industry can tremendously benefit from
+the work done so far in the area of the HC informatics standardization, in order to provide
+HC-specific Application Frameworks (to be used by RAD tools) that will make software
+            development easier and more efficient.</b> For the purposes of this chapter, we will
+concentrate only on Application Frameworks for HIS; adopting HISA’s perspective
+            namely that HISA targets any type of HC organization.<br></p>
+<p>The main features of such an Application Framework for HIS should be:</p>
+        <p>• The ability to design and build highly customizable and adaptive applications;<br>
+• The inherent support of global healthcare standards, such as HL7, DICOM, and
+so on; and<br>
+• The inherent support of open standards and interoperable protocols, such as XML
+and SOAP.</p>
+        <p>In order to achieve the first goal, an approach like the one openEHR (Beale, 2002), is
+evangelizing might be very useful: “separation of knowledge and information levels in
+information systems”. Actually, we go a little further: data concepts, business rules and
+workflow, as well as user interfaces should not be hard- coded in the applications
+produced. Key consequence of such a practice is that software and data depend only on
+small, non-volatile models. Applications can thus be developed and deployed quickly,
+even without waiting for the knowledge concepts to be thoroughly defined. Such an
+approach is closer to today’s design of information systems practice that as Kuhn and
+Giuse (2002, p. 71) say “…is moving from completely modelling a system before
+implementing it, to interactive rapid prototyping”. This methodology also, allows new
+or modified domain concepts, changes in operational workflows (e.g., hospital procedures), or changes in security/privacy policy rules, to be quickly and seamlessly
+integrated at a low cost without major software recompilation and user annoyance or
+ideally without any recompilation of the code.</p>
+        <p class="copy">Copyright © 2005, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.</p>
+        <p>The inherent support of global HC standards should also be an a<i> priori</i> characteristic
+of an Application Framework for HIS. Roughly analogous to the need of supporting HC
+standards within a HC application framework is the need of supporting for example ODBC
+or the SOAP within a RAD: it’s inconceivable not to; try to imagine for example someone
+that uses Microsoft’s Visual studio, having to read and implement the SOAP! In reality,
+that means that the developer will be exhausted by SOAP technicalities missing the
+business process details. Kuhn and Giuse (2002, p.65) refer to Regenstrief medical record
+system (one of the success stories in health informatics) and to the developers’ statement
+that: “we believe that our success represents persistent efforts to build interfaces
+directly to multiple independent instruments and other data collection systems, using
+medical standards such as HL7, LOINC, and DICOM”. So, from the developers’ point of
+view (who will be the actual users of such a framework) it is clear that it is more than
+enviable to have handy HC standards implementations.<br>
+The same stands for IT standards and interoperable protocols. Actually, once more as
+Kuhn and Giuse (2002, p. 72) summarize, “…the broad acceptance of web standards such
+as XML has led to their integration into the ongoing standardization process”.<br>
+Using frameworks in order to provide applications offers significant benefits. Applications can extend and specialize extension points—-called “hot spots” as mentioned by
+Markiewicz and Lucena (2001)—provided by the framework, according to their special
+needs (Johnson, 1997). The modularity, reusability, extensibility and inversion of control
+that a framework offers can encapsulate an amount of complexity that framework clients
+(applications) can reuse (Fayad & Schmidt, 1997). In such a scenario as Fayad and Hamu
+explains (2000), applications are built on top of frameworks, which provide an extensive
+library of business objects supporting the intended application domain and use its
+services. The use of frameworks can reduce the overall cost of creation and maintenance
+of a health-related application. This cost is enormous because of the special requirements
+of HC, namely increased security, interoperability, extensibility, portability, and the
+ability to evolve. Application frameworks can effectively handle these aspects. The
+development of a framework is generally more expensive than a single application but can
+payoff through the repeated generation of applications within the proposed domain as
+Markiewicz and Lucena say (2001).<br>Besides the above benefits from application frameworks, it’s significant to note another
+side-effect of adopting frameworks in application development: Most times, the use of
+a framework denotes the use of an Information Model or something analogous, since the
+framework is not an ad-hoc development result. That means that at the end, we will have
+a repository of business objects definitions or at least, a formal description of concepts.
+That is very critical in order to translate between different ontologies. In case this “formal
+            description of concepts” originates from the<i> middleware of common services</i> (possible
+as a common service itself), it can even result in consistently merging the ontologies
+used. Although using reference models for realizing the middleware of common services
+layer is a common place that is not the case when it comes to the applications located
+            in the <i>applications layer.</i><br>
+An application framework providing a clear description of the underlying data structures
+as well as built-in validity and consistency rules for data verification can also help reduce
+data entry errors and minimize the excessive cost of cleaning medical databases for
+knowledge discovery purposes. Krzystof (2001) claims that data preparation for any</p>
+         <p class="copy">Copyright © 2005, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.</p>
+        <p>knowledge discovery process usually consumes at least half the entire project effort and
+is a major contributor to its cost. This situation is even more challenging for medical
+databases that are characterized by incomplete, imprecise and inconsistent data, as data
+collection is usually a by-product of the primary patient care activities. Decision support
+systems are powerful tools for improving medical decision making and preventing
+medical errors. It is reported that medical errors are a leading cause of death, while the
+majority of adverse events that contribute to patient morbidity or mortality are preventable. Decision support systems can help reduce medical errors by questioning the
+actions of healthcare professionals, offering advice and examining a range of possibilities that humans cannot possibly remember (Kohn, Corrigan, & Donaldson, 1999). The
+accuracy of developed decision support systems depends heavily on the precision and
+correctness of the available data and the sufficient modelling of the underlying domain
+concepts.<br>
+While the technical advantages of application frameworks are sufficiently covered by
+literature, their business perspective is largely neglected. It is reported that the adaptive
+nature of application frameworks enables flexible response to new and rapidly changing
+market opportunities, making a framework a strategic tool for attacking vertical markets
+(Codenie, De Hondt, Steyaert, & Vercammen, 1997). Return on investment from a
+developed application framework may come from selling it to other companies or by future
+savings in development effort within a company itself, such as higher software quality
+and shorter lead times (Fayad, Schmidt, & Johnson, 1999).<br>
+Although business opportunities from developing a framework may be intuitive, the lack
+of a reliable business model for framework development has made management departments reluctant to adopt framework-based solutions. The Value Based Reuse Investment
+(VBRI) approach (Fayad et al., 1999) tries to fill the gap and views reuse investments as
+a continuous process of formulating strategic options and then evaluating them with
+respect to their potential for value creation. It also suggests that the “potential of</p>
+        <p><i>Figure 2. Framework.Health services placement over the 3-tier architecture</i></p>
+        <center><img src="Screenshot%20(38).png"></center>
+         <p class="copy">Copyright © 2005, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.</p>
+        <p>application framework technology for value creation can only be realized if it is exploited
+at all levels of the Reuse Capability Model” and not only at the lower levels of the model,
+such as at the level of individual projects, which is already practiced by many organizations worldwide. This means that reuse should be employed at an organization-wide level
+and over multiple projects. Moreover, reuse strategies should take into account families
+of related products and create new business opportunities in a rapidly changing market
+environment.</p>
+      <center>  <h1><b>Developing an Application<br>
+          Framework for HIS</b></h1></center>
+        <div class="line"></div>
+        <p>For the last two years, the authors of this document have toiled developing an application
+framework for HC domain (Framework.Health) able to be integrated within Microsoft’s
+Visual Studio .Net.<br>
+The framework provides all the software modules needed for the handling of dynamically
+defined and reusable HC business objects (e.g., patient demographics, diagnoses,
+            exams). The built-in infrastructure of the framework includes an<i> XML metadata layer</i> and
+            <i>the base services layer</i> (see Figure 2).<br>
+            The<i> XML metadata layer</i> provides a common domain concept repository that allows the
+semantic interoperability among the application tiers and supports all operations
+performed by the base services layer. The HC business objects populating the domain
+concept repository are derived from HL7 v 2.4 standard entities. These concepts, along
+with business rules, operational workflow and user interface design, are not hard-coded
+into the applications, but maintained externally into the XML metadata layer. This layer
+            also defines a set of <i>XML</i> languages for formally describing data types, data structures
+and messages, as well as user interface behavior and application workflows that are
+needed to build the data and software model.</p>
+        <p><b>The</b> <i>base services layer</i> <b>exposes all the functionality needed for building HC
+            applications, namely:</b></p>
+        <p>1.<i> The data persistence</i> services provide a uniform and flexible way of accessing the
+underlying data storage. The data model is explicitly derived from the business
+objects described in XML resource files (e.g., a relational database schema is
+generated dynamically from these files). Any changes to the business objects are
+easily incorporated into the data model implementation. Moreover, the framework
+provides a set of software libraries for accessing the data storage, which accelerate
+the application development and provide a uniform and reliable way of communicating with the data storage tier.<br>
+2. The framework provides a set of libraries that aid the construction and manipulation
+of business entities using an object-oriented programming language. These
+libraries make use of the metadata layer to create the appropriate structure for each</p>
+         <p class="copy">Copyright © 2005, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.</p>
+        <p>entity that the application uses and provide a common interface for the manipulation of the data stored in these structures, (e.g., HL7 segments and data types are
+instantiated as objects). These libraries also provide coupling with the data
+persistence services.<br>
+            3. The <i>messaging services</i> include XML-based message definition, message creation
+and validation. The framework provides a solid infrastructure for secure message
+transfer, as well as message processing and persistence tools. A specific messaging implementation is provided for HL7 v2.4 messages.<br>
+4. Adaptive user interface construction involves all the mechanisms for user interface definition through the use of XML and dynamic UI creation based on the XML
+description files. One can find a complete discussion of the used approach in
+(Marinos, Marinos & Koutsouris, 2003).</p>
+        <p>The overall framework architecture consists of three distinct parts: the Data Model, the
+            <i>Controller</i> and the <i>Presentation Layer.</i> The architecture is depicted on Figure 3.<br>
+Data Model. The framework provides a reference implementation of the HL7 standard
+data model. This model includes data types, segments (a logical grouping of data fields)
+and messages (the atomic units of data transferred between systems); please refer to
+(HL7 version 2.5, 2003) for a consist definition of the terms “data types”, “segments” and
+“messages”. These entities are not hard-coded into the framework, but externally defined
+in XML format. Figure 4 shows the XML definition of the CE (Coded Element) HL7 data type.<br>
+            Similar definitions apply to<i> segments and messages</i> and are customizable according to
+each specific implementation (e.g., according to HL7 conformance profiles). Figure 5
+shows an example of a segment definition.<br>
+XML definitions also describe the mapping of such entities to database schema elements,
+as shown in Figure 6. The elements and attributes of the XML fragment shown on Figure
+6, instruct some specialized framework components on how to create the database</p>
+        <p><i>Figure 3. Framework health architecture</i></p>
+        <center><img src="Screenshot%20(39).png"></center>
+         <p class="copy">Copyright © 2005, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.</p>
+        <p><i>Figure 4. Data type definition example</i></p>
+        <img src="Screenshot%20(40).png">
+        <p><i>Figure 5. Segment definition example</i></p>
+        <img src="Screenshot%20(41).png">
+        <p><i>Figure 6. Mapping to database tables</i></p>
+        <img src="Screenshot%20(42).png">
+        <p>schema and how to map business entities to database tables during query and transaction activities. E.g. the <i>link=”true”</i> directive advises the framework that the PatientName
+            field of the PID segment is not saved in the<i> PID</i>_TABLE table, but is stored in the table
+            reserved for the <i>XPN</i> data type (the field’s data type).<br>
+The Data Model tier contains also the actual processing units that handle message
+            content, called <i>Action handlers.</i> These are autonomous software modules that use the
+base services functionality and may produce new messages that respond to initial
+requests or notify interested parties about a system event.<br>
+            <i>Controller.</i> The <i>Controller</i> module receives and processes all ingoing/outgoing messages. The Controller implements a messaging pipeline using the SOAP protocol, where
+messages are processed at each node of the Pipeline and forwarded to the next node.
+This involves authentication and authorization of the message sender, logging and
+tracing of all message flow within the system, applying business rules and dispatching
+            the messages to the appropriate <i>Action handlers.</i><br>
+            The<i> Pipeline</i> is fully configurable through an XML configuration file. For example,
+additional processing nodes can be added (e.g., a message compression/decompression</p>
+    </body>
+</html>
